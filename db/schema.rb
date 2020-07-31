@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_31_080307) do
+ActiveRecord::Schema.define(version: 2020_07_31_081013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,17 @@ ActiveRecord::Schema.define(version: 2020_07_31_080307) do
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "person_backups", force: :cascade do |t|
+    t.bigint "person_id"
+    t.string "email"
+    t.string "home_phone_number"
+    t.string "mobile_phone_number"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_person_backups_on_person_id"
   end
 
 end

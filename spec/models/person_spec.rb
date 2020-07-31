@@ -47,6 +47,13 @@ RSpec.describe Person, type: :model do
 
   end
 
+  context "associations" do
+
+    describe "person_backups" do
+      it { expect(@person).to have_many(:person_backups) }
+    end
+
+  end
 
   context "public class methods" do
 

@@ -1,6 +1,8 @@
 class Person < ApplicationRecord
 	require 'csv'
 
+	has_many :person_backups
+
 	validates :reference, presence: true 
 	validates :email, presence: true
 	validates :firstname, presence: true
