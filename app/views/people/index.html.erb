@@ -5,7 +5,7 @@
   <div>
     <h4 class="mb-3">Import people data from CSV</h4>
     <%= form_tag import_people_path, multipart: true do %>
-      <%= file_field_tag :file %>
+      <%= file_field_tag :file , required: true %>
       <%= submit_tag "Import CSV" %>
     <% end %>
   </div>
