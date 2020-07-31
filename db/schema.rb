@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_31_071019) do
+ActiveRecord::Schema.define(version: 2020_07_31_080307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "building_backups", force: :cascade do |t|
+    t.bigint "building_id"
+    t.string "manager_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["building_id"], name: "index_building_backups_on_building_id"
+  end
 
   create_table "buildings", force: :cascade do |t|
     t.string "reference"

@@ -43,6 +43,14 @@ RSpec.describe Building, type: :model do
 
   end
 
+  context "associations" do
+
+    describe "buiding_backups" do
+      it { expect(@building).to have_many(:building_backups) }
+    end
+
+  end
+
   context "public class methods" do
 
     describe "self.import" do

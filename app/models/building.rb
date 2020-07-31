@@ -1,6 +1,8 @@
 class Building < ApplicationRecord
 	require 'csv'
 
+	has_many :building_backups
+
 	validates :reference, presence: true 
 	validates :address, presence: true
 	validates :zip_code, presence: true
