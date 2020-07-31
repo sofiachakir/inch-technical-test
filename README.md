@@ -1,24 +1,41 @@
-# README
+# Inch Technical Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is Ruby on Rails app that will update the database to match the data the clients provide in CSV format on a daily basis.
 
-Things you may want to cover:
+The objective is to code the CSV import and handle some specific update rules.
 
-* Ruby version
+## Versions :
 
-* System dependencies
+Ruby - 2.5.1
 
-* Configuration
+Rails - 5.2.4
 
-* Database creation
+DB - PostgreSQL
 
-* Database initialization
+Framework - Ruby on Rails
 
-* How to run the test suite
+## To start :
+To use this app locally, download the repo or clone it.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Installation:
+```bash
+bundle install
+```
+```bash
+rails db:create
+```
+```bash
+rails db:migrate
+```
+```bash
+rails server
+```
+Then go to ```http://localhost:3000/```
 
-* Deployment instructions
+## How to test the app ?
 
-* ...
+### Via Rspec
+Run ```rspec``` 
+
+### By using input files
+Some csv files are provided in app/assets/csvfiles folder
